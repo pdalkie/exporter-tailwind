@@ -166,6 +166,8 @@ function measureTypeIntoReadableUnit(type) {
       return "%";
     case "Ems":
       return "em";
+    case "Rem":
+      return "rem";
   }
 }
 
