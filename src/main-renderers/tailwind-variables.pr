@@ -42,6 +42,7 @@ module.exports = {
         {[ for token in tokens ]}
             {[ let tokenName = token.name.replacing("$", "").lowercased().replacing(" ", "-") /]}
             '{{ ((tokenName === "main") ? "DEFAULT" : tokenName) }}': 'var(--{[ inject "rendered-name" context token /]})', {[ inject "rendered-description" context token /]}
+
         {[/]}
         {[/]}
     {[/]}
