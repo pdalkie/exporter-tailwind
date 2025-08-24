@@ -35,7 +35,6 @@ module.exports = {
     {[/]}
     },
     'spacing': {
-    {[ let brand = ds.currentBrand() /]}
     {[ const groups = ds.tokenGroupsOfType("Measure", brand.id) /]}
     {[ for g in groups ]}
         {[ if !g.isRoot && (g.name.lowercased() == "space" || g.name.lowercased() == "spacing" || g.path.join("/").lowercased().contains("space")) ]}
