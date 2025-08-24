@@ -35,10 +35,10 @@ module.exports = {
     {[/]}
     },
     'spacing': {
-    {[ const measureRoot = @ds.tokenGroupTreeByType("Measure") /]}
+    {[ const measureRoot = ds.tokenGroupTreeByType("Measure") /]}
     {[ traverse measureRoot property subgroups into g ]}
         {[ if !g.isRoot && (g.name.lowercased() == "space" || g.path.join("/").lowercased().contains("space")) ]}
-        {[ const tokens = @ds.tokensByGroupId(g.id) /]}
+        {[ const tokens = ds.tokensByGroupId(g.id) /]}
         {[ for token in tokens ]}
             {[ let tokenName = token.name.replacing("$", "").lowercased().replacing(" ", "-") /]}
             '{{ ((tokenName === "main") ? "DEFAULT" : tokenName) }}': 'var(--{[ inject "rendered-name" context token /]})', {[ inject "rendered-description" context token /]}
